@@ -17,6 +17,7 @@ import List from './components/List';
 import Forms from './components/Forms';
 import Temprature from './components/Temprature';
 import Dialog from './components/Dialog';
+import Products from './components/Products';
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<HelloWorld />, document.getElementById('hello'));
@@ -33,6 +34,7 @@ ReactDOM.render(<List />, document.getElementById('list'));
 ReactDOM.render(<Forms />, document.getElementById('forms'));
 ReactDOM.render(<Temprature />, document.getElementById('temprature'));
 ReactDOM.render(<Dialog />, document.getElementById('dialog'));
+ReactDOM.render(<Products />, document.getElementById('products'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
