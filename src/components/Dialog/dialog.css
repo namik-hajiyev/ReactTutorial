@@ -1,0 +1,16 @@
+.FancyBorder {
+    border-radius: 10%;
+    border-width: 5px;
+    border-style: inset;
+}
+
+.FancyBorder-blue {
+    border-color: blue;
+}
+
+.FancyBorder-red {
+    border-color: red;
+}
+.FancyBorder-green {
+    border-color: red;
+}
