@@ -14,6 +14,7 @@ import Temprature from './Temprature';
 import Dialog from './Dialog';
 import Products from './Products';
 import ForwardRefs from './advanced/ForwardRefs';
+import CodeSplit from './advanced/CodeSplit';
 
 
 export {
@@ -32,5 +33,6 @@ export {
     Temprature,
     Dialog,
     Products,
-    ForwardRefs
+    ForwardRefs,
+    CodeSplit
 };

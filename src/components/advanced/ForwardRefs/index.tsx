@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import { Dhr } from '../../DottedHr';
 
 class FancyButton1 extends React.Component {
@@ -68,11 +68,22 @@ const ref1 = React.createRef<HTMLButtonElement>();
 const ref2 = React.createRef<FancyButton2>();
 const ref3 = React.createRef<HTMLButtonElement>();
 const ref4 = React.createRef<FancyButton2>();
-class ForwardRefs extends React.Component {
+class ForwardRefs extends React.Component<any, { text: string }> {
+    constructor(props: any) {
+        super(props);
+        this.state = { text: '' };
+        this.handleChange = this.handleChange.bind(this);
+    }
+    handleChange(event: ChangeEvent<HTMLInputElement>) {
+        this.setState({ text: event.target.value });
+    }
 
     render() {
 
         return (<div>
+            <label>Update Components</label>
+            <input value={this.state.text} onChange={this.handleChange} />
+            <br />
             <FancyButton1 >fancy button 1</FancyButton1>
             <Dhr />
             <FancyButtonForwardRef1 ref={ref1}>fancy button forward ref 1</FancyButtonForwardRef1>

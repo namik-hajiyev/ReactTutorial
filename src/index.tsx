@@ -19,7 +19,8 @@ import {
     Temprature,
     Dialog,
     Products,
-    ForwardRefs
+    ForwardRefs,
+    CodeSplit
 } from './components';
 
 
@@ -46,3 +47,4 @@ ReactDOM.render(<Temprature />, document.getElementById('temprature'));
 ReactDOM.render(<Dialog />, document.getElementById('dialog'));
 ReactDOM.render(<Products />, document.getElementById('products'));
 ReactDOM.render(<ForwardRefs />, document.getElementById('forwardRefs'));
+ReactDOM.render(<CodeSplit />, document.getElementById('codeSplit'));
