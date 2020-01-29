@@ -15,7 +15,7 @@ import Dialog from './Dialog';
 import Products from './Products';
 import ForwardRefs from './advanced/ForwardRefs';
 import CodeSplit from './advanced/CodeSplit';
-
+import Contexts from './advanced/Contexts'
 
 export {
     HelloWorld,
@@ -34,5 +34,6 @@ export {
     Dialog,
     Products,
     ForwardRefs,
-    CodeSplit
+    CodeSplit,
+    Contexts
 };

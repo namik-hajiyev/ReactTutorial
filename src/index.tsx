@@ -20,7 +20,8 @@ import {
     Dialog,
     Products,
     ForwardRefs,
-    CodeSplit
+    CodeSplit,
+    Contexts
 } from './components';
 
 
@@ -48,3 +49,4 @@ ReactDOM.render(<Dialog />, document.getElementById('dialog'));
 ReactDOM.render(<Products />, document.getElementById('products'));
 ReactDOM.render(<ForwardRefs />, document.getElementById('forwardRefs'));
 ReactDOM.render(<CodeSplit />, document.getElementById('codeSplit'));
+ReactDOM.render(<Contexts />, document.getElementById('contexts'));
