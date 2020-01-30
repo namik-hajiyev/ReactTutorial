@@ -30,23 +30,44 @@ import {
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
+const components: ComponentWithId[] = [
+    { id: 'hello', component: HelloWorld },
+    { id: 'jsx', component: JSX },
+    { id: 'welcome', component: Welcome },
+    { id: 'clock', component: Clock },
+    { id: 'counter', component: Counter },
+    { id: 'toggle', component: Toggle },
+    { id: 'select', component: Select },
+    { id: 'login', component: Login },
+    { id: 'mailbox', component: Mailbox },
+    { id: 'warning', component: Warning },
+    { id: 'list', component: List },
+    { id: 'forms', component: Forms },
+    { id: 'temprature', component: Temprature },
+    { id: 'dialog', component: Dialog },
+    { id: 'products', component: Products },
+    { id: 'forwardRefs', component: ForwardRefs },
+    { id: 'codeSplit', component: CodeSplit },
+    { id: 'contexts', component: Contexts }
+];
+renderAll(components);
 
-//components
-ReactDOM.render(<HelloWorld />, document.getElementById('hello'));
-ReactDOM.render(<JSX />, document.getElementById('jsx'));
-ReactDOM.render(<Welcome />, document.getElementById('welcome'));
-ReactDOM.render(<Clock />, document.getElementById('clock'));
-ReactDOM.render(<Counter />, document.getElementById('counter'));
-ReactDOM.render(<Toggle />, document.getElementById('toggle'));
-ReactDOM.render(<Select />, document.getElementById('select'));
-ReactDOM.render(<Login />, document.getElementById('login'));
-ReactDOM.render(<Mailbox />, document.getElementById('mailbox'));
-ReactDOM.render(<Warning />, document.getElementById('warning'));
-ReactDOM.render(<List />, document.getElementById('list'));
-ReactDOM.render(<Forms />, document.getElementById('forms'));
-ReactDOM.render(<Temprature />, document.getElementById('temprature'));
-ReactDOM.render(<Dialog />, document.getElementById('dialog'));
-ReactDOM.render(<Products />, document.getElementById('products'));
-ReactDOM.render(<ForwardRefs />, document.getElementById('forwardRefs'));
-ReactDOM.render(<CodeSplit />, document.getElementById('codeSplit'));
-ReactDOM.render(<Contexts />, document.getElementById('contexts'));
+type ComponentWithId = { id: string, component: React.FunctionComponent | React.ClassType<any, any, any> };
+
+function renderAll(components: ComponentWithId[]) {
+    components.forEach(component => {
+        renderComponent(component);
+    });
+
+}
+
+function renderComponent(component: ComponentWithId) {
+    var root = document.getElementById('root');
+    var div = document.createElement("div");
+    div.id = component.id;
+    var hr = document.createElement("hr");
+    root!.appendChild(div);
+
+    ReactDOM.render(React.createElement(component.component, {}, null), document.getElementById(component.id));
+    root!.appendChild(hr);
+}
