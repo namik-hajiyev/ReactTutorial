@@ -15,7 +15,9 @@ import Dialog from './Dialog';
 import Products from './Products';
 import ForwardRefs from './advanced/ForwardRefs';
 import CodeSplit from './advanced/CodeSplit';
-import Contexts from './advanced/Contexts'
+import Contexts from './advanced/Contexts';
+import ErrorBoundary from './advanced/ErrorBoundary';
+import ErrorBoundaryTest from './advanced/ErrorBoundary/ErrorBoundaryTest';
 
 export {
     HelloWorld,
@@ -35,5 +37,7 @@ export {
     Products,
     ForwardRefs,
     CodeSplit,
-    Contexts
+    Contexts,
+    ErrorBoundary,
+    ErrorBoundaryTest
 };

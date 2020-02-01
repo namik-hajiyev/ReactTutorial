@@ -21,7 +21,8 @@ import {
     Products,
     ForwardRefs,
     CodeSplit,
-    Contexts
+    Contexts,
+    ErrorBoundaryTest
 } from './components';
 
 
@@ -48,7 +49,8 @@ const components: ComponentWithId[] = [
     { id: 'products', component: Products },
     { id: 'forwardRefs', component: ForwardRefs },
     { id: 'codeSplit', component: CodeSplit },
-    { id: 'contexts', component: Contexts }
+    { id: 'contexts', component: Contexts },
+    { id: 'errorBoundaryTest', component: ErrorBoundaryTest }
 ];
 renderAll(components);
 
